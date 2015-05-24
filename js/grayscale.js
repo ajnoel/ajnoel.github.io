@@ -171,7 +171,7 @@ function init() {
     var image = 'img/map-marker.png';
 
       var ctaLayer = new google.maps.KmlLayer({
-    url: 'http://alicianoel.github.io/Data/visual_resume_2.kml'
+    url: 'http://alicianoel.github.io/Data/visual_resume.kml'
   });
   ctaLayer.setMap(map);
 }
