@@ -1,18 +1,17 @@
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Projects</title>
-    <style>
+	<html>
+		<head>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			    <style>
       html, body, #map-canvas {
         height: 100%;
         margin: 0px;
         padding: 0px
       }
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
     <script>
 function initialize() {
   var chicago = new google.maps.LatLng(41.875696,-87.624207);
@@ -32,10 +31,31 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
     </script>
-  </head>
-  <body>
-    <div id="map-canvas"></div>
-  </body>
-</html>
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about">About</a></li>
+	        		<li><a href="/cv">CV</a></li>
+	        		<li><a href="/blog">Blog</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+<div id="map-canvas"></div>
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="mailto:ajnoel9@gmail.com">email</a></li>
+	        		<li><a href="https://github.com/alicianoel">github</a></li>
+	        		<li><a href="https://www.linkedin.com/in/alicianoel">LinkedIn</a></li>
+				</ul>
+			</footer>
+		</body>
+	</html>
 
- 
+
+
+
