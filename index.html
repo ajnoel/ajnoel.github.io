@@ -1,36 +1,180 @@
----
-layout: default
-title: Alicia Noel - Map
----
-<style>
-	#map-canvas {
-    height: 500px;
-    margin: 25px;
-    padding: 25px
-  }
-  </style>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
-  <script>
-  function initialize() {
-  var chicago = new google.maps.LatLng(41.875696,-87.624207);
-  var mapOptions = {
-    zoom: 11,
-    center: chicago
-  }
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  var ctaLayer = new google.maps.KmlLayer({
-    url: 'http://alicianoel.github.io/Data/visual_resume_2.kml'
-  });
-  ctaLayer.setMap(map);
-	}
-	google.maps.event.addDomListener(window, 'load', initialize);
-  </script>
-    
-	<div class="blurb">
-		<h1>Projects</h1>
-		<div id="map-canvas"></div>
-	</div> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Grayscale - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Home</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#resume">Resume</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="http://alicianoel.github.io/blog/">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Alicia Noel</h1>
+                        <p class="intro-text">GIS professional.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About</h2>
+                <p>Hi, my name is Alicia Noel. I'm a GIS (geographic information system) specialist, currently working at Google in the San Francisco Bay area. Please check out my visual resume below! </p>
+                <p>Check out my coding work on my <a href="https://github.com/alicianoel">github page</a> </p>
+            </div>
+        </div>
+    </section>
 
 
 
+    <!-- map Section -->
+    <section id="projects" class="content-section text-center">
+        <div class="map-section">
+                <div class="container">
+                <h2>Projects</h2>
+                <div id="map"></div>
+        </div>
+                </div>
+    </section>
 
+    <!-- Download Section -->
+    <section id="resume" class="container content-section text-center">
+                <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Resume</h2>
+                    <p><a href="http://alicianoel.github.io/cv/">View Resume</a>
+                </p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Download Resume</a>
+                </div>
+            </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section text-center">
+        <div class="download-section">
+                <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact me</h2>
+                <p>Please feel free to email or contact me via the social media networks below.</p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="mailto:ajnoel9@gmail.com" class="btn btn-default btn-lg">Email</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/alicianoel" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/alicianoel" class="btn btn-default btn-lg">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+                </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Alicia Noel 2014</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>
