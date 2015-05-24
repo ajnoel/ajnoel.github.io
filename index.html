@@ -1,13 +1,10 @@
----
-layout: default
-title: Alicia Noel - GIS specialist
----
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>KML Layers</title>
+    <title>Projects</title>
     <style>
       html, body, #map-canvas {
         height: 100%;
@@ -27,7 +24,7 @@ function initialize() {
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   var ctaLayer = new google.maps.KmlLayer({
-    url: 'http://gmaps-samples.googlecode.com/svn/trunk/ggeoxml/cta.kml'
+    url: 'http://alicianoel.github.io/Data/visual_resume_2.kml'
   });
   ctaLayer.setMap(map);
 }
