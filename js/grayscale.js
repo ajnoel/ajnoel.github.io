@@ -29,149 +29,193 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-// Google Maps Scripts
-// When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
 
-function init() {
-    // Basic options for a simple Google Map
-    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-    var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
-        zoom: 15,
 
-        // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(37.339, -122.02), // SF
 
-        // Disables the default Google Maps UI components
-        disableDefaultUI: false,
-        scrollwheel: false,
-        draggable: true,
 
-        // How you would like to style the map. 
-        // This is where you would paste any style found on Snazzy Maps.
-        styles: [{
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }]
-        }, {
-            "featureType": "landscape",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 20
-            }]
-        }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }]
-        }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 29
-            }, {
-                "weight": 0.2
-            }]
-        }, {
-            "featureType": "road.arterial",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 18
-            }]
-        }, {
-            "featureType": "road.local",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 16
-            }]
-        }, {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 21
-            }]
-        }, {
-            "elementType": "labels.text.stroke",
-            "stylers": [{
-                "visibility": "on"
-            }, {
-                "color": "#000000"
-            }, {
-                "lightness": 16
-            }]
-        }, {
-            "elementType": "labels.text.fill",
-            "stylers": [{
-                "saturation": 36
-            }, {
-                "color": "#000000"
-            }, {
-                "lightness": 40
-            }]
-        }, {
-            "elementType": "labels.icon",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "transit",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 19
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 20
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }, {
-                "weight": 1.2
-            }]
-        }]
-    };
 
-    // Get the HTML DOM element that will contain your map 
-    // We are using a div with id="map" seen below in the <body>
-    var mapElement = document.getElementById('map');
 
-    // Create the Google Map using out element and options defined above
-    var map = new google.maps.Map(mapElement, mapOptions);
 
-    // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-    var image = 'img/map-marker.png';
 
-      var ctaLayer = new google.maps.KmlLayer({
-    url: 'http://alicianoel.github.io/Data/visual_resume.kml'
+
+      var map;
+
+      var MY_MAPTYPE_ID = 'custom_style';
+
+      var mapdata;
+
+      var latlng = new google.maps.LatLng(40.453650, -98.003783);
+      var styleData = {
+                  fillColor: '#9696B4',
+                  strokeWeight: 1
+                   };
+      
+     infoWindow = new google.maps.InfoWindow({
+
+          content: ""
+        });
+     
+
+
+      
+
+      function loadData() 
+    {
+      $.getJSON('http://alicianoel.github.io/Data/visual_resume.geojson', function (data) {
+  mapdata = map.data.addGeoJson(data);
+
+    map.data.setStyle({
+      visible: true
   });
-  ctaLayer.setMap(map);
-}
+});
+    }
+
+ 
+
+      
+      
+    
+
+    
+function initialize() {
+  
+  
+  var style = [ { "featureType" : "poi",
+    "stylers" : [ { "visibility" : "off" } ]
+  },
+  { "elementType" : "geometry",
+    "featureType" : "administrative",
+    "stylers" : [ { "visibility" : "off" } ]
+  },
+  { "elementType" : "geometry",
+    "featureType" : "administrative.land_parcel",
+    "stylers" : [ { "visibility" : "on" } ]
+  },
+  { "elementType" : "geometry",
+    "featureType" : "administrative.country",
+    "stylers" : [ { "visibility" : "on" } ]
+  },
+  { "elementType" : "geometry",
+    "featureType" : "administrative.province",
+    "stylers" : [ { "visibility" : "on" } ]
+  },
+  { "elementType" : "geometry",
+    "featureType" : "administrative.neighborhood",
+    "stylers" : [ { "visibility" : "on" } ]
+  },
+  { "elementType" : "geometry",
+    "featureType" : "administrative.locality",
+    "stylers" : [ { "visibility" : "on" } ]
+  },
+  { "elementType" : "labels",
+    "featureType" : "administrative.locality",
+    "stylers" : [ { "hue" : "#548096" },
+        { "saturation" : -50 },
+        { "lightness" : 35 },
+        { "visibility" : "on" }
+      ]
+  },
+  { "elementType" : "labels",
+    "featureType" : "road",
+    "stylers" : [ { "visibility" : "simplified" } ]
+  },
+  { "elementType" : "geometry",
+    "featureType" : "water",
+    "stylers" : [ { "hue" : "#548096" },
+        { "saturation" : -37 },
+        { "lightness" : -10 },
+        { "visibility" : "on" }
+      ]
+  },
+  { "elementType" : "all",
+    "featureType" : "landscape",
+    "stylers" : [ { "hue" : "#E3CBAC" },
+        { "saturation" : 31 },
+        { "lightness" : -12 },
+        { "visibility" : "on" }
+      ]
+  },
+  { "featureType" : "road",
+    "stylers" : [ { "visibility" : "simplified" },
+        { "saturation" : -49 },
+        { "lightness" : 5 }
+      ]
+  },
+  { "elementType" : "geometry",
+    "featureType" : "road",
+    "stylers" : [ { "visibility" : "simplified" },
+        { "saturation" : -90 },
+        { "lightness" : 90 }
+      ]
+  },
+  { "featureType" : "administrative.land_parcel",
+    "stylers" : [ { "visibility" : "off" },
+        { "lightness" : 25 }
+      ]
+  }
+];
+  
+    
+
+    
+    
+    
+
+  var mapOptions = {
+    disableDefaultUI: false,
+    zoom: 5,
+    center: latlng,
+    mapTypeControlOptions: {
+    style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+    position: google.maps.ControlPosition.TOP_RIGHT,
+    mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]},
+    mapTypeId: MY_MAPTYPE_ID
+    }
+   map = new google.maps.Map(document.getElementById('map'),mapOptions);
+    
+    
+
+    
+  var styledMapOptions = {name: 'Simple Atlas'};
+  var customMapType = new google.maps.StyledMapType(style, styledMapOptions);
+  map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+  
+
+  
+loadData(); //loading in all the data as invisible
+         map.data.addListener('click', function(event) {  // info window on click
+        //show an infowindow on click
+        //infoWindow.setContent(event.feature.getProperty('Updated'));   
+        var date = event.feature.getProperty('Date');
+        var more = event.feature.getProperty('More');
+        var name = event.feature.getProperty('Name');
+        var position = event.feature.getProperty('Position');
+        infoWindow.setContent("<b>Name:</b> "+name+"<br/><b>Date: </b>"+date+"<br/><b>Position: </b>"+position+" <br/><b>Read More: </b>"+more);
+        var anchor = new google.maps.MVCObject();
+        anchor.set("position",event.latLng);
+        infoWindow.open(map,anchor);
+      });
+
+  
+  }
+  
+
+    
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
