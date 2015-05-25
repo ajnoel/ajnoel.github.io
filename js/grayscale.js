@@ -36,7 +36,7 @@ var mapdata;
 var latlng = new google.maps.LatLng(36.58, -121.5);
 var styleData = {
         //icon: "http://alicianoel.github.io/img/map-marker.png",
-        fillColor: 'white',
+        fillColor: '#ffffff',
         size: (10, 16),
         scale: .1,
         strokeWeight: 1
