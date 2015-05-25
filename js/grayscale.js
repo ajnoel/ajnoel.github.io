@@ -47,9 +47,7 @@ function loadData()
 {
   $.getJSON('http://alicianoel.github.io/Data/visual_resume.geojson', function (data) {
 mapdata = map.data.addGeoJson(data);
-map.data.setStyle({
-  visible: true
-});
+map.data.setStyle(styleData);
 });
 }
 
