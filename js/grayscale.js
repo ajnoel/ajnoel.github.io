@@ -33,7 +33,7 @@ $('.navbar-collapse ul li a').click(function() {
 var map;
 var MY_MAPTYPE_ID = 'custom_style';
 var mapdata;
-var latlng = new google.maps.LatLng(40.453650, -98.003783);
+var latlng = new google.maps.LatLng(36.58, -121.5);
 var styleData = {
           fillColor: '#9696B4',
           strokeWeight: 1
