@@ -30,137 +30,31 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 
-
-
-
-
-
-
-
-
-      var map;
-
-      var MY_MAPTYPE_ID = 'custom_style';
-
-      var mapdata;
-
-      var latlng = new google.maps.LatLng(40.453650, -98.003783);
-      var styleData = {
-                  fillColor: '#9696B4',
-                  strokeWeight: 1
-                   };
-      
-     infoWindow = new google.maps.InfoWindow({
-
-          content: ""
-        });
-     
-
-
-      
-
-      function loadData() 
-    {
-      $.getJSON('http://alicianoel.github.io/Data/visual_resume.geojson', function (data) {
-  mapdata = map.data.addGeoJson(data);
-
-    map.data.setStyle({
-      visible: true
-  });
+var map;
+var MY_MAPTYPE_ID = 'custom_style';
+var mapdata;
+var latlng = new google.maps.LatLng(40.453650, -98.003783);
+var styleData = {
+          fillColor: '#9696B4',
+          strokeWeight: 1
+           };
+infoWindow = new google.maps.InfoWindow({
+  content: ""
 });
-    }
+     
+function loadData() 
+{
+  $.getJSON('http://alicianoel.github.io/Data/visual_resume.geojson', function (data) {
+mapdata = map.data.addGeoJson(data);
+map.data.setStyle({
+  visible: true
+});
+});
+}
 
- 
-
-      
-      
-    
-
-    
 function initialize() {
+  var style = [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}];
   
-  
-  var style = [ { "featureType" : "poi",
-    "stylers" : [ { "visibility" : "off" } ]
-  },
-  { "elementType" : "geometry",
-    "featureType" : "administrative",
-    "stylers" : [ { "visibility" : "off" } ]
-  },
-  { "elementType" : "geometry",
-    "featureType" : "administrative.land_parcel",
-    "stylers" : [ { "visibility" : "on" } ]
-  },
-  { "elementType" : "geometry",
-    "featureType" : "administrative.country",
-    "stylers" : [ { "visibility" : "on" } ]
-  },
-  { "elementType" : "geometry",
-    "featureType" : "administrative.province",
-    "stylers" : [ { "visibility" : "on" } ]
-  },
-  { "elementType" : "geometry",
-    "featureType" : "administrative.neighborhood",
-    "stylers" : [ { "visibility" : "on" } ]
-  },
-  { "elementType" : "geometry",
-    "featureType" : "administrative.locality",
-    "stylers" : [ { "visibility" : "on" } ]
-  },
-  { "elementType" : "labels",
-    "featureType" : "administrative.locality",
-    "stylers" : [ { "hue" : "#548096" },
-        { "saturation" : -50 },
-        { "lightness" : 35 },
-        { "visibility" : "on" }
-      ]
-  },
-  { "elementType" : "labels",
-    "featureType" : "road",
-    "stylers" : [ { "visibility" : "simplified" } ]
-  },
-  { "elementType" : "geometry",
-    "featureType" : "water",
-    "stylers" : [ { "hue" : "#548096" },
-        { "saturation" : -37 },
-        { "lightness" : -10 },
-        { "visibility" : "on" }
-      ]
-  },
-  { "elementType" : "all",
-    "featureType" : "landscape",
-    "stylers" : [ { "hue" : "#E3CBAC" },
-        { "saturation" : 31 },
-        { "lightness" : -12 },
-        { "visibility" : "on" }
-      ]
-  },
-  { "featureType" : "road",
-    "stylers" : [ { "visibility" : "simplified" },
-        { "saturation" : -49 },
-        { "lightness" : 5 }
-      ]
-  },
-  { "elementType" : "geometry",
-    "featureType" : "road",
-    "stylers" : [ { "visibility" : "simplified" },
-        { "saturation" : -90 },
-        { "lightness" : 90 }
-      ]
-  },
-  { "featureType" : "administrative.land_parcel",
-    "stylers" : [ { "visibility" : "off" },
-        { "lightness" : 25 }
-      ]
-  }
-];
-  
-    
-
-    
-    
-    
-
   var mapOptions = {
     disableDefaultUI: false,
     zoom: 5,
@@ -173,17 +67,12 @@ function initialize() {
     }
    map = new google.maps.Map(document.getElementById('map'),mapOptions);
     
-    
-
-    
   var styledMapOptions = {name: 'Simple Atlas'};
   var customMapType = new google.maps.StyledMapType(style, styledMapOptions);
   map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
   
-
-  
-loadData(); //loading in all the data as invisible
-         map.data.addListener('click', function(event) {  // info window on click
+    loadData(); 
+     map.data.addListener('click', function(event) {  // info window on click
         //show an infowindow on click
         //infoWindow.setContent(event.feature.getProperty('Updated'));   
         var date = event.feature.getProperty('Date');
@@ -194,14 +83,9 @@ loadData(); //loading in all the data as invisible
         var anchor = new google.maps.MVCObject();
         anchor.set("position",event.latLng);
         infoWindow.open(map,anchor);
-      });
-
-  
+    });
   }
-  
-
-    
-  google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
