@@ -35,8 +35,9 @@ var MY_MAPTYPE_ID = 'custom_style';
 var mapdata;
 var latlng = new google.maps.LatLng(36.58, -121.5);
 var styleData = {
-          fillColor: '#9696B4',
-          strokeWeight: 1
+        icon: "http://alicianoel.github.io/img/map-marker.png",
+        fillColor: '#9696B4',
+        strokeWeight: 1
            };
 infoWindow = new google.maps.InfoWindow({
   content: ""
