@@ -35,8 +35,7 @@ var MY_MAPTYPE_ID = 'custom_style';
 var mapdata;
 var latlng = new google.maps.LatLng(36.58, -121.5);
 var styleData = {
-        //icon: "http://alicianoel.github.io/img/map-marker.png",
-        fillColor: '#ffffff',
+        icon: "http://alicianoel.github.io/img/map-marker.png",
         size: (10, 16),
         scale: .1,
         strokeWeight: 1
