@@ -156,9 +156,9 @@ a:focus {
     background-size: cover;
     -o-background-size: cover;
 }
+
 .projects-page {
     display: table;
-    margin-top:50px;
     width: 100%;
     height: auto;
     padding: 50px 0;
@@ -172,7 +172,11 @@ a:focus {
     background-size: cover;
     -o-background-size: cover;
 }
-
+.projects .projects-body {
+    display: table-cell;
+    margin-top:50px;
+    vertical-align: middle;
+}
 .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
