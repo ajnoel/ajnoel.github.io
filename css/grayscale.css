@@ -315,6 +315,10 @@ a:focus {
     background-size: cover;
     -o-background-size: cover;
 }
+.text .text-body {
+    display: table-cell;
+    
+}
 
 .text-box {
     width: 80%;
