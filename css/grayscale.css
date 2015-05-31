@@ -311,6 +311,7 @@ a:focus {
 
 .map-section {
     width: 100%;
+    left: 50 px;
     padding: 50px 0;
     background-color: #000;
     -webkit-background-size: cover;
