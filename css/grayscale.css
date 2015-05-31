@@ -301,6 +301,21 @@ a:focus {
     -o-background-size: cover;
 }
 
+.text {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    padding-top: 50px;
+    color: #fff;
+    background: url(../img/sf-bw3.jpg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .text-box {
     width: 80%;
     position: absolute;
