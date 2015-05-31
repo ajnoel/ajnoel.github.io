@@ -305,6 +305,7 @@ a:focus {
     width: 80%;
     position: absolute;
     padding: 50px 50px;
+    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
     left: 50px;
     color: #fff;
     z-index: 1;
