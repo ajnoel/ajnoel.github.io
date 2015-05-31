@@ -299,8 +299,8 @@ a:focus {
 .text-box {
     width: 80%;
     padding: 50px 0;
-    color: #D3D3D3;
-    background-color: #000;
+    color: #fff;
+    background-color: #D3D3D3;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
