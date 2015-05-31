@@ -322,12 +322,12 @@ a:focus {
 
 .text-box {
     width: 80%;
-
+    margin-top:50px;
     padding: 50px 50px;
     left: 50px;
     color: #fff;
     z-index: 1;
-    background-color: rgba(211, 211, 211, 0.22);
+    background-color: rgba(211, 211, 211, 0.45);
 
 }
 
