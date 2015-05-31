@@ -296,6 +296,18 @@ a:focus {
     -o-background-size: cover;
 }
 
+.text-box {
+    width: 80%;
+    padding: 50px 0;
+    color: #D3D3D3;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+}
+
 .map-section {
     width: 100%;
     padding: 50px 0;
