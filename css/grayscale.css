@@ -313,7 +313,6 @@ a:focus {
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
 }
 .text .text-body {
