@@ -309,6 +309,7 @@ a:focus {
     padding-top: 50px;
     color: #fff;
     background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background-attachment: fixed;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
