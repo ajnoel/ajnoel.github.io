@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>visual_resume.kml</name>
+	<Style id="sn_map-marker">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>alicianoel.github.io/img/map-marker.png</href>
+			</Icon>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sh_map-marker">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>alicianoel.github.io/img/map-marker.png</href>
+			</Icon>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_map-marker">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_map-marker</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_map-marker</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>visual_resume</name>
+		<open>1</open>
+		<Placemark>
+			<name>UC Davis Geology</name>
+			<description><![CDATA[UC Davis Geology
+Fall 2008 - Summer 2012
+Student - Bachelor's Degree
+<a href="http://alicianoel.github.io/projects/uc_davis_geology.html">More Info</a>]]></description>
+			<LookAt>
+				<longitude>-121.7518835682864</longitude>
+				<latitude>38.53530679589675</latitude>
+				<altitude>0</altitude>
+				<heading>-0.0003039706543208137</heading>
+				<tilt>13.24368844980721</tilt>
+				<range>481.9348528241705</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_map-marker</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-121.7518835682864,38.53530679589675,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SETI Institute</name>
+			<description><![CDATA[SETI Institute
+Sept. 2012-Jan. 2014
+Research Assistant
+<a href="http://alicianoel.github.io/projects/seti_institute.html">More info</a>
+]]></description>
+			<LookAt>
+				<longitude>-122.0500863479476</longitude>
+				<latitude>37.38658970339377</latitude>
+				<altitude>0</altitude>
+				<heading>-6.361109362927034e-15</heading>
+				<tilt>0</tilt>
+				<range>885.0597455632101</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_map-marker</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-122.0515004421433,37.38626536174876,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NASA Ames Research Center</name>
+			<description><![CDATA[NASA Ames Research Center
+Summer 2008
+INSPIRE Intern
+<a href="http://alicianoel.github.io/projects/nasa_ames.html">More info</a>
+]]></description>
+			<LookAt>
+				<longitude>-122.0565379225892</longitude>
+				<latitude>37.41673144248065</latitude>
+				<altitude>0</altitude>
+				<heading>0.001511597486202566</heading>
+				<tilt>21.3275943862621</tilt>
+				<range>1496.935222102789</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_map-marker</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-122.0588377158206,37.42015721698496,9.651418920929039</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NASA JPL</name>
+			<description><![CDATA[NASA JPL
+Aug. 2011-Dec. 2011
+USRP Intern
+<a href="http://alicianoel.github.io/projects/nasa_jpl.html">More info</a>
+]]></description>
+			<LookAt>
+				<longitude>-118.1711301038314</longitude>
+				<latitude>34.19910881843624</latitude>
+				<altitude>0</altitude>
+				<heading>0.0005325729462280525</heading>
+				<tilt>0</tilt>
+				<range>1640.181793311888</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_map-marker</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-118.1716115285509,34.19999206854202,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Google</name>
+			<description><![CDATA[Google
+Sept. 2013-present
+GIS Operations Lead, Imagery Team
+<a href="http://alicianoel.github.io/projects/google_gis.html">More info</a>
+
+
+
+]]></description>
+			<LookAt>
+				<longitude>-122.0914507831021</longitude>
+				<latitude>37.42294574011812</latitude>
+				<altitude>0</altitude>
+				<heading>9.884048752100647e-07</heading>
+				<tilt>0</tilt>
+				<range>2561.838008762127</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_map-marker</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-122.0925447785245,37.42294573513124,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

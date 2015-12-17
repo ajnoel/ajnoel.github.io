@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>visual_resume_2</name>
+  <Placemark>
+	<name>UC Davis Geology</name>
+	<ExtendedData><SchemaData schemaUrl="#visual_resume_2">
+		<SimpleData name="More">&lt;a href=&quot;http://alicianoel.github.io/projects/uc_davis_geology.html&quot;&gt;http://alicianoel.github.io/projects/uc_davis_geology.html&lt;/a&gt;</SimpleData>
+		<SimpleData name="Date">Fall 2008 - Summer 2012</SimpleData>
+		<SimpleData name="Position">Student - Bachelor's Degree</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-121.751883568286402,38.535306795896751,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SETI Institute</name>
+	<ExtendedData><SchemaData schemaUrl="#visual_resume_2">
+		<SimpleData name="More">&lt;a href=&quot;http://alicianoel.github.io/projects/seti_institute.html&quot;&gt;http://alicianoel.github.io/projects/seti_institute.html&lt;/a&gt;</SimpleData>
+		<SimpleData name="Date">Sept. 2012-Jan. 2014</SimpleData>
+		<SimpleData name="Position">Research Assistant</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-122.051500442143293,37.386265361748762,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>NASA Ames Research Center</name>
+	<ExtendedData><SchemaData schemaUrl="#visual_resume_2">
+		<SimpleData name="More">&lt;a href=&quot;http://alicianoel.github.io/projects/nasa_ames.html&quot;&gt;http://alicianoel.github.io/projects/nasa_ames.html&lt;/a&gt;</SimpleData>
+		<SimpleData name="Date">Summer 2008</SimpleData>
+		<SimpleData name="Position">INSPIRE Intern</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-122.058837715820601,37.420157216984961,9.651418920929039</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>NASA JPL</name>
+	<ExtendedData><SchemaData schemaUrl="#visual_resume_2">
+		<SimpleData name="More">&lt;a href=&quot;http://alicianoel.github.io/projects/nasa_jpl.html&quot;&gt;http://alicianoel.github.io/projects/nasa_jpl.html&lt;/a&gt;</SimpleData>
+		<SimpleData name="Date">Aug. 2011-Dec. 2011</SimpleData>
+		<SimpleData name="Position">USRP Intern</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-118.171611528550898,34.199992068542016,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Google</name>
+	<ExtendedData><SchemaData schemaUrl="#visual_resume_2">
+		<SimpleData name="More">&lt;a href=&quot;http://alicianoel.github.io/projects/google_gis.html&quot;&gt;http://alicianoel.github.io/projects/google_gis.html&lt;/a&gt;</SimpleData>
+		<SimpleData name="Date">Sept. 2013-present</SimpleData>
+		<SimpleData name="Position">GIS Operations Lead</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-122.092544778524498,37.422945735131243,0</coordinates></Point>
+  </Placemark>
+</Folder>
+<Schema name="visual_resume_2" id="visual_resume_2">
+	<SimpleField name="More" type="string"></SimpleField>
+	<SimpleField name="Date" type="string"></SimpleField>
+	<SimpleField name="Position" type="string"></SimpleField>
+</Schema>
+</Document></kml>
