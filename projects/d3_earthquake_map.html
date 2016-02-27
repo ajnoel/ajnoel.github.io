@@ -289,13 +289,16 @@ d3.csv("http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.csv",
 
 function mapPoints(data, clicked) {
 
+      var scale = zoom.scale();
+    console.log(scale);
+
     circles.selectAll("circle").remove();
     selected = circles.selectAll("circle")
     .data(data)
         .enter().append("svg:circle")
     .attr("cx", function(d) { return d[0]; })
     .attr("cy", function(d) { return d[1]; })
-    .attr("r", function(d) { return Math.pow(d[2],2) / 2; })
+    .attr("r", function(d) { return (Math.pow(d[2],2) / 2)/scale; })
     .style("fill", function(d) {
     if (clicked.length == 0) {
       return colorRamp(Math.floor(d[2]))
